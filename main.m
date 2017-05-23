@@ -25,3 +25,9 @@ subplot(2,3,2),imshow(arithmetic_filtered),title('Filtered By Arithmetic Mean');
 subplot(2,3,3),imshow(geometric_filtered),title('Filtered By Geometric Mean');
 subplot(2,3,4),imshow(median_filtered),title('Filtered By Median');
 subplot(2,3,5),imshow(question_2_b(img_3,3)),title('Filtered By Adaptive Median');
+%% 
+img_3=imread('inputs/ferrari_driving.jpg');
+figure;
+subplot(3,1,1),imshow(img_3),title('Original Image');
+subplot(3,1,2),imshow(question_3_a(img_3)),title('Filtered By Using Zero SNR');
+subplot(3,1,3),imshow(question_3_b(img_3)),title('Filtered By Using SNR');
