@@ -18,6 +18,10 @@ exp_pdf = exppdf(x,2);
 subplot(3,3,9),plot(exp_pdf),title('PDF of Exponential Distribution Function');
 %%
 img_2=imread('inputs/Assignment5_Noisy.bmp');
+[arithmetic_filtered,geometric_filtered,median_filtered]=question_1_a(img_2);
 figure('Name','Question -2','Position',[1000 100 1000 1000]);
-imshow(img_2);
-imfilter()
+subplot(2,2,1),imshow(img_2),title('Original Image');
+subplot(2,2,2),imshow(arithmetic_filtered),title('Filtered By Arithmetic Mean');
+subplot(2,2,3),imshow(geometric_filtered),title('Filtered By Geometric Mean');
+subplot(2,2,4),imshow(median_filtered),title('Filtered By Median');
+
