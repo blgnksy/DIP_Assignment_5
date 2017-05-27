@@ -24,10 +24,22 @@ subplot(2,3,1),imshow(img_2),title('Original Image');
 subplot(2,3,2),imshow(arithmetic_filtered),title('Filtered By Arithmetic Mean');
 subplot(2,3,3),imshow(geometric_filtered),title('Filtered By Geometric Mean');
 subplot(2,3,4),imshow(median_filtered),title('Filtered By Median');
-subplot(2,3,5),imshow(question_2_b(img_3,3)),title('Filtered By Adaptive Median');
+subplot(2,3,5),imshow(question_2_b(img_2,3)),title('Filtered By Adaptive Median');
 %% 
 img_3=imread('inputs/ferrari_driving.jpg');
 figure;
 subplot(3,1,1),imshow(img_3),title('Original Image');
 subplot(3,1,2),imshow(question_3_a(img_3)),title('Filtered By Using Zero SNR');
 subplot(3,1,3),imshow(question_3_b(img_3)),title('Filtered By Using SNR');
+%% 
+img_4=imread('inputs/Peppers.ppm');
+figure;
+subplot(2,1,1),imshow(img_4(:,:,1)),title('Original Image(Red Band)');
+subplot(2,1,2),imshow(question_4_c(img_4)),title('RG Chromaticity');
+%% 
+img_4=imread('inputs/Peppers.ppm');
+figure;
+subplot(3,1,1),imshow(img_4(:,:,1)),title('Original Image(Red Band)');
+[rgb2gray_img,rgb2hsv_img]=question_4_d(img_4);
+subplot(3,1,2),imshow(rgb2gray_img),title('Weighted Algorithm');
+subplot(3,1,3),imshow(rgb2hsv_img),title('HSV Value');
